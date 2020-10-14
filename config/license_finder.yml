@@ -1,0 +1,2 @@
+# Where the liscense decisions will be saved
+decisions_file: './config/license_dependency_decisions.yml'
