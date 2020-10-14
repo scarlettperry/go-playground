@@ -5,6 +5,7 @@ on:
      - main
     paths:
       - go.mod
+      - .github/workflows/license_review.yml
 jobs:
   license-check:
     runs-on: ubuntu-latest
