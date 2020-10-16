@@ -5,6 +5,7 @@ on:
      - main
     paths:
       - go.mod
+      - .github/workflows/license_review.yml
 jobs:
   license-check:
     runs-on: ubuntu-latest
@@ -17,3 +18,5 @@ jobs:
         run: gem install license_finder
       - name: Run license finder
         run: license_finder
+        with:
+          path: ./tools/license-finder
