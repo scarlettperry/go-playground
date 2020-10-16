@@ -21,6 +21,5 @@ jobs:
       - name: Run license finder
         run: license_finder
         working-directory: ${{env.working-directory}}
-      - name: Dependecies need approval
         if: ${{ failure() }}
-        run: echo See ./tools/license-finder/README.md for instructions on approving a dependency
+        run: See ./tools/license-finder/README for instructions on approving a dependency
