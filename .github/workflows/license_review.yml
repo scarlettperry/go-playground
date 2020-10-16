@@ -20,7 +20,8 @@ jobs:
       - name: Install license finder
         run: gem install license_finder
       - name: Run license finder
-        run: |
-          echo 'See ./tools/license-finder for instructions on approving a dependency'
-          license_finder
+        run: license_finder
         working-directory: ${{env.working-directory}}
+      - name: Check on failures
+        if: ${{ failure() }}
+        run: echo 'See ./tools/license-finder for instructions on approving a dependency'
